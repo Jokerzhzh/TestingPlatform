@@ -5,8 +5,14 @@ export default new Router({
     routes: [
         {
             path: '/',
-            redirect: '/testProject'
+            component: resolve => require(['@/components/page/ChartList.vue'], resolve),
+            hidden: true,
+            meta: {title: '图标页面'}
         },
+        // {
+        //     path: '/',
+        //     redirect: '/testProject'
+        // },
         {
             path: '/',
             component: resolve => require(['@/components/common/Home'], resolve),
